@@ -3,7 +3,7 @@ import { Search } from "./blocks/search/search";
 import { MessageInfo } from "./blocks/message-info/message-info";
 import { MessageContent } from "./blocks/message-content/message-content";
 
-import { Message } from './views/message/message';
+import { Mail } from './views/mail/mail';
 import { MessagesRouter} from './views/messagesRouter';
 /* eslint-disable */
 import _ from './messages.scss';
@@ -15,7 +15,7 @@ window.Search = Search;
 window.MessageInfo = MessageInfo;
 window.MessageContent = MessageContent;
 
-window.Message = Message;
+window.Mail = Mail;
 
 window.addEventListener('DOMContentLoaded', () => {
   const cards = {cards : [
@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }]
   };
-  const message = new Message(cards);
+  const message = new Mail(cards);
   const router = new MessagesRouter();
 
   message.render(document.querySelector('.js-view-message'));

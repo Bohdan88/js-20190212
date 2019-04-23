@@ -1,18 +1,18 @@
 import { View } from '../view';
-import template from './message.pug';
+import template from './mail.pug';
 import { MessageInfo } from '../../blocks/message-info/message-info';
 import { MessageContent } from '../../blocks/message-content/message-content';
 import { Search } from '../../blocks/search/search';
 import { MessageCard } from '../../blocks/message-card/message-card'
 
 /* eslint-disable */
-import _ from './message.scss';
+import _ from './mail.scss';
 
 /* eslint-enable */
 
-export class Message extends View {
+export class Mail extends View {
   get bemName () {
-    return 'message';
+    return 'mail';
   }
   template (data) {
     return template(data);
@@ -48,7 +48,7 @@ export class Message extends View {
     this.messageInfo.render(this.getElement('wrapper'));
     this.messageContent.render(this.messageInfo.content);
     this.search.render(this.getElement('search'));
-    const renderElemets = Array.from(el.querySelectorAll('.message__cards'));
+    const renderElemets = Array.from(el.querySelectorAll(`.${this.bemName}__cards`));
     this.HTMLcards.forEach((item, i) => {
       item.render(renderElemets[i]);
     });
