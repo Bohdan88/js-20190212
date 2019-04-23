@@ -17,6 +17,11 @@ export class Message extends View {
   template (data) {
     return template(data);
   }
+  update (number) {
+    const card = this.HTMLcards[number];
+    this.messageInfo.update(card.options.message);
+    this.messageContent.update(card.options.message, this.messageInfo.content);
+  }
   constructor (options) {
     super(options);
     this.HTMLcards = [];

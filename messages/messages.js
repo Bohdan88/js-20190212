@@ -4,7 +4,7 @@ import { MessageInfo } from "./blocks/message-info/message-info";
 import { MessageContent } from "./blocks/message-content/message-content";
 
 import { Message } from './views/message/message';
-import { Router } from '../libs/router';
+import { MessagesRouter} from './views/messagesRouter';
 /* eslint-disable */
 import _ from './messages.scss';
 
@@ -23,12 +23,13 @@ window.addEventListener('DOMContentLoaded', () => {
       h5: 'Conference Team',
       text: 'Lorem Ipsum is simply dummy text of the printing Lorem Ipsum',
       url: 'https://js.cx/carousel/1.png',
+      id: 1,
       message: {
         title: 'Lorem 1',
         emailFrom: 'burlakili@bk.ru',
         emailTo: 'burlakili@bk.ru',
         time: '10 янв 2019',
-        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+        text: '<p>Lorem 1 ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
       }
     },
     {
@@ -38,10 +39,10 @@ window.addEventListener('DOMContentLoaded', () => {
       id: 2,
       message: {
         title: 'Lorem 2',
-        emailFrom: 'burlakili@bk.ru',
-        emailTo: 'burlakili@bk.ru',
-        time: '10 янв 2019',
-        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+        emailFrom: 'test@bk.com',
+        emailTo: 'test@bk.com',
+        time: '21 янв 2019',
+        text: '<p>Lorem 2 ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
       }
     },
     {
@@ -51,18 +52,19 @@ window.addEventListener('DOMContentLoaded', () => {
       id: 3,
       message: {
         title: 'Lorem 3',
-        emailFrom: 'burlakili@bk.ru',
-        emailTo: 'burlakili@bk.ru',
-        time: '10 янв 2019',
-        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+        emailFrom: 'bag@bk.buz',
+        emailTo: 'bag@bk.buz',
+        time: '10 янв 2018',
+        text: '<p>Lorem 3 ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
       }
     }]
   };
   const message = new Message(cards);
-  const router = new Router();
+  const router = new MessagesRouter();
 
   message.render(document.querySelector('.js-view-message'));
-  // router.register('contacts', listView, true);
-  // router.register('card', cardView);
+  router.register('message1', message, true);
+  router.register('message2', message);
+  router.register('message3', message);
   router.start();
 });

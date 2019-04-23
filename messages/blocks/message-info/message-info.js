@@ -12,11 +12,11 @@ export class MessageInfo extends Block {
   get content () {
     return this.el.querySelector(`.${this.bemName}__content`);
   }
+  template (data) {
+    return template(data);
+  }
   update (data) {
     this.options = data;
     this.render(this.el);
-  }
-  template (data) {
-    return template(data);
   }
 }

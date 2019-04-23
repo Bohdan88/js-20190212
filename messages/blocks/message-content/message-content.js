@@ -6,11 +6,14 @@ import _ from './message-content.scss';
 /* eslint-enable */
 
 export class MessageContent extends Block {
+  get bemName () {
+    return 'letter';
+  }
   template (data) {
     return template(data);
   }
-  update (data) {
+  update (data, el) {
     this.options = data;
-    this.render(this.el);
+    this.render(el);
   }
 }
