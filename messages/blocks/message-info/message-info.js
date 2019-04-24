@@ -19,4 +19,5 @@ export class MessageInfo extends Block {
     this.options = data;
     this.render(this.el);
   }
+
 }

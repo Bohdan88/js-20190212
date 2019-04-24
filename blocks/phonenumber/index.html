@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>простая форма ввода номера</title>
+    <script src="../../dist/toolkit.js"></script>
+</head>
+<body>
+<h5>Простой вариант формы для ввода телефонного номера</h5>
+<div class="js-phonenumber"></div>
+
+<script>
+
+    (function () {
+        'use strict';
+
+        const phone = new Phonenumber({
+            name: 'phonenumber',
+            label: 'Телефонный номер',
+            placeholder: '8-999-9999999',
+            required: true
+        });
+        console.log(phone)
+
+        phone.render(document.querySelector('.js-phonenumber'));
+    })();
+</script>
+</body>
+</html>
