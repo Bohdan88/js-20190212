@@ -15,4 +15,8 @@ export class MessageInfo extends Block {
   template (data) {
     return template(data);
   }
+  update (data) {
+    this.options = data;
+    this.render(this.el);
+  }
 }

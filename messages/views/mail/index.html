@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../../dist/messages.js"></script>
+    <link href="../../../libs/bemskel.min.css" rel="stylesheet"/>
+    <title>Message</title>
+</head>
+<body>
+<div class="js-message"></div>
+<script>
+    (function () {
+        const message = new Mail({
+            cards: [
+                {
+                    h5: 'Conference Team',
+                    text: 'Lorem Ipsum is simply dummy text of the printing Lorem Ipsum',
+                    url: 'https://js.cx/carousel/1.png',
+                    id: 1,
+                    message: {
+                        title: 'Lorem 1',
+                        emailFrom: 'burlakili@bk.ru',
+                        emailTo: 'burlakili@bk.ru',
+                        time: '10 янв 2019',
+                        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+                    }
+                },
+                {
+                    h5: 'Slack',
+                    text: 'Lorem Ipsum is simply dummy text of the printing Lorem Ipsum',
+                    url: '',
+                    id: 2,
+                    message: {
+                        title: 'Lorem 2',
+                        emailFrom: 'burlakili@bk.ru',
+                        emailTo: 'burlakili@bk.ru',
+                        time: '10 янв 2019',
+                        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+                    }
+                },
+                {
+                    h5: 'Ivan Petrov',
+                    text: 'Lorem Ipsum is simply dummy text of the printing Lorem Ipsum',
+                    url: 'https://js.cx/clipart/winnie-mult.jpg',
+                    id: 3,
+                    message: {
+                        title: 'Lorem 3',
+                        emailFrom: 'burlakili@bk.ru',
+                        emailTo: 'burlakili@bk.ru',
+                        time: '10 янв 2019',
+                        text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat itaque vitae assumenda vel magni illum, ut illo perferendis velit Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nemo dignissimos? Quia ea similique debitis impedit odio minima architecto sunt.</p>'
+                    }
+                }],
+            });
+
+        message.render(document.querySelector('.js-message'));
+    })();
+</script>
+</body>
+</html>
