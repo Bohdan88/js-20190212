@@ -1,8 +1,8 @@
 export class Router {
   constructor () {
     this.routes = {};
-    // this.defaultRoute = null;
     this.defaultRoute = null;
+
   }
   register (route, view, isDefault = false) {
     this.routes[route] = view;
